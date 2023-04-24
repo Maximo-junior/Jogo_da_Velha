@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #232323;
+}
+
+h1 {
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #242323;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 8px;
+}
+
+#gameBoard {
+  background-color: #252524;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  max-width: 19rem;
+}
+
+#gameBoard span {
+  background-color: #1aff05;
+  display: grid;
+  place-content: center;
+  font-size: 5rem;
+}
+
+#gameBoard span.win {
+  background-color: #fbff00;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  animation: aparecer 0.5s ease-in-out forwards;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid #333;
+  color: #333;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #333;
+  font-weight: bold;
+}
+
+label {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button {
+  border-radius: 3px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #36a12c;
+  color: #fff;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
